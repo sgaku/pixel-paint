@@ -18,6 +18,7 @@ public class block : MonoBehaviour
 
     public void onClickAct()
     {
-        Destroy(gameObject);
+      GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, 0.3f);
+      Destroy(gameObject, 0.05f);
     }
 }
