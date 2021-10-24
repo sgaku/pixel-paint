@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class block : MonoBehaviour
+public class checkColor : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,9 +14,5 @@ public class block : MonoBehaviour
     void Update()
     {
         
-    }
-    public void onClick()
-    {
-        Destroy(gameObject);
     }
 }
