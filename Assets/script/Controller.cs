@@ -21,7 +21,8 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(checkColor());
+        checkColor();
+
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, layer);
         if (Input.GetMouseButtonDown(0))
@@ -31,17 +32,21 @@ public class Controller : MonoBehaviour
 
             if (hit.collider != null )
             {
-                if(hit.collider.gameObject.CompareTag("block") && checkColor() )
+                if(hit.collider.gameObject.CompareTag("block") )
                 {
-                    Destroy(hit.collider.gameObject);
-                    Instantiate(whiteBlock, hit.collider.transform.position, Quaternion.identity);
-                }
-               else if (hit.collider.gameObject.CompareTag("block")&& checkColor()!)
-                {
-                    Destroy(hit.collider.gameObject);
-                    Instantiate(pinkBlock, hit.collider.transform.position, Quaternion.identity);
-                }
+                    if (checkColor())
+                    {
+                        Debug.Log("checkColor");
+                        Destroy(hit.collider.gameObject);
+                        Instantiate(whiteBlock, hit.collider.transform.position, Quaternion.identity);
+                    }else if (!checkColor())
+                    {Debug.Log("!checkColor");
+                        Destroy(hit.collider.gameObject);
+                        Instantiate(pinkBlock, hit.collider.transform.position, Quaternion.identity);
+                    }
 
+                }
+               
                 
 
 
@@ -59,14 +64,16 @@ public class Controller : MonoBehaviour
         {
             if (hit.collider != null && hit.collider.gameObject.name == "checkwhite")
             {
+                Debug.Log("t");
                 return true;
             }
             else if (hit.collider != null && hit.collider.gameObject.name == "checkpink")
             {
+                Debug.Log("f");
                 return false;
             }
         }
-        return true;
+        return false;
 
     }
 
