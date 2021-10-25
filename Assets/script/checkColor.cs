@@ -15,4 +15,8 @@ public class checkColor : MonoBehaviour
     {
         
     }
+    public void onClick()
+    {
+
+    }
 }
