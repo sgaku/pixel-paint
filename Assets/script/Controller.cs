@@ -9,6 +9,11 @@ public class Controller : MonoBehaviour
     public GameObject whiteBlock;
     bool checkColor;
     public GameObject heart;
+    public GameObject mini;
+   public List<GameObject> heartbl = new List<GameObject>();
+   public List<GameObject> minibl = new List<GameObject>();
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -67,8 +72,30 @@ public class Controller : MonoBehaviour
             }
                 
         }
+
+       
          
            
+    }
+
+    public void AddList()
+    {
+        foreach(Transform heartblock in heart.transform)
+        {
+            if (heartblock.gameObject.CompareTag("block"))
+            {
+                heartbl.Add(heartblock.gameObject);
+            }
+        }
+
+        foreach(Transform miniblock in mini.transform)
+        {
+            if (miniblock.gameObject.CompareTag("block"))
+            {
+                minibl.Add(miniblock.gameObject); 
+            }
+        }
+        
     }
    
 

@@ -7,10 +7,14 @@ public class button : MonoBehaviour
 
     public GameObject heart;
     public GameObject mini;
+   
  
 
    public void OnClick()
     {
+        FindObjectOfType<Controller>().AddList();
+
+       
         Debug.Log("click");
         foreach(Transform child in heart.transform)
         {
@@ -34,5 +38,7 @@ public class button : MonoBehaviour
             child.transform.localScale = new Vector3(1, 1, 1);
 
         }
+
+        
     }
 }
