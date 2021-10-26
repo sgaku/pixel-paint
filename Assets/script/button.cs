@@ -6,6 +6,7 @@ public class button : MonoBehaviour
 {
 
     public GameObject heart;
+    public GameObject mini;
  
 
    public void OnClick()
@@ -20,7 +21,18 @@ public class button : MonoBehaviour
             }
           
             child.transform.localScale = new Vector3(1, 1, 1);
-            child.transform.rotation = Quaternion.Euler(0,0,0);
+        
+        }
+
+        foreach(Transform child in mini.transform)
+        {
+            if (child.gameObject.CompareTag("block"))
+            {
+                var collider = child.gameObject.GetComponent<PolygonCollider2D>();
+                collider.enabled = false;
+            }
+            child.transform.localScale = new Vector3(1, 1, 1);
+
         }
     }
 }
