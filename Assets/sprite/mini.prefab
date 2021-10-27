@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7834992266844649989}
   m_Layer: 0
   m_Name: pink (3)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 7834992267159420566}
   m_Layer: 0
   m_Name: pink (14)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -856,7 +856,7 @@ GameObject:
   - component: {fileID: 7834992267253645484}
   m_Layer: 0
   m_Name: pink (1)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1072,7 +1072,7 @@ GameObject:
   - component: {fileID: 7834992267484494947}
   m_Layer: 0
   m_Name: pink (13)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1206,7 +1206,7 @@ GameObject:
   - component: {fileID: 7834992267527163397}
   m_Layer: 0
   m_Name: pink (18)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1340,7 +1340,7 @@ GameObject:
   - component: {fileID: 7834992267627918763}
   m_Layer: 0
   m_Name: pink (16)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1556,7 +1556,7 @@ GameObject:
   - component: {fileID: 7834992267679882289}
   m_Layer: 0
   m_Name: white (1)
-  m_TagString: block
+  m_TagString: whiteblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1772,7 +1772,7 @@ GameObject:
   - component: {fileID: 7834992267738408245}
   m_Layer: 0
   m_Name: pink (15)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1988,7 +1988,7 @@ GameObject:
   - component: {fileID: 7834992267783077169}
   m_Layer: 0
   m_Name: pink (2)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2122,7 +2122,7 @@ GameObject:
   - component: {fileID: 7834992267802971396}
   m_Layer: 0
   m_Name: pink (9)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2338,7 +2338,7 @@ GameObject:
   - component: {fileID: 7834992267899670708}
   m_Layer: 0
   m_Name: pink (8)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2472,7 +2472,7 @@ GameObject:
   - component: {fileID: 7834992267901891374}
   m_Layer: 0
   m_Name: pink (4)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2606,7 +2606,7 @@ GameObject:
   - component: {fileID: 7834992267950560172}
   m_Layer: 0
   m_Name: pink (6)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2810,7 +2810,7 @@ GameObject:
   - component: {fileID: 7834992268014621793}
   m_Layer: 0
   m_Name: white
-  m_TagString: block
+  m_TagString: whiteblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2944,7 +2944,7 @@ GameObject:
   - component: {fileID: 7834992268067685127}
   m_Layer: 0
   m_Name: pink (19)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3078,7 +3078,7 @@ GameObject:
   - component: {fileID: 7834992268112773604}
   m_Layer: 0
   m_Name: pink (11)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3376,7 +3376,7 @@ GameObject:
   - component: {fileID: 7834992268437511625}
   m_Layer: 0
   m_Name: pink (10)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3510,7 +3510,7 @@ GameObject:
   - component: {fileID: 7834992268451434355}
   m_Layer: 0
   m_Name: pink (5)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3808,7 +3808,7 @@ GameObject:
   - component: {fileID: 7834992268523861638}
   m_Layer: 0
   m_Name: pink
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4024,7 +4024,7 @@ GameObject:
   - component: {fileID: 7834992268540474420}
   m_Layer: 0
   m_Name: pink (7)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4158,7 +4158,7 @@ GameObject:
   - component: {fileID: 7834992268812714349}
   m_Layer: 0
   m_Name: pink (17)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4374,7 +4374,7 @@ GameObject:
   - component: {fileID: 7834992268843338621}
   m_Layer: 0
   m_Name: pink (12)
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

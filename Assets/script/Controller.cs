@@ -48,7 +48,7 @@ public class Controller : MonoBehaviour
                     checkColor = false;
                 }
 
-                if(hit.collider.gameObject.CompareTag("block") )
+                if(hit.collider.gameObject.CompareTag("whiteblock") || hit.collider.gameObject.CompareTag("pinkblock"))
                 {
                     if (checkColor)
                     {
@@ -82,15 +82,19 @@ public class Controller : MonoBehaviour
     {
         foreach(Transform heartblock in heart.transform)
         {
-            if (heartblock.gameObject.CompareTag("block"))
+            if (heartblock.gameObject.CompareTag("whiteblock")||heartblock.gameObject.CompareTag("pinkblock"))
             {
+                int roundX = Mathf.RoundToInt(heartblock.transform.position.x);
+                int roundY = Mathf.RoundToInt(heartblock.transform.position.y);
+
+                
                 heartbl.Add(heartblock.gameObject);
             }
         }
 
         foreach(Transform miniblock in mini.transform)
         {
-            if (miniblock.gameObject.CompareTag("block"))
+            if (miniblock.gameObject.CompareTag("whiteblock")||miniblock.gameObject.CompareTag("pinkblock"))
             {
                 minibl.Add(miniblock.gameObject); 
             }
