@@ -18,7 +18,7 @@ public class button : MonoBehaviour
         Debug.Log("click");
         foreach(Transform child in heart.transform)
         {
-            if (child.gameObject.CompareTag("block"))
+            if (child.gameObject.CompareTag("whiteblock")|| child.gameObject.CompareTag("pinkblock"))
             {
                 var collider = child.gameObject.GetComponent<PolygonCollider2D>();
                 collider.enabled = false;
@@ -30,11 +30,7 @@ public class button : MonoBehaviour
 
         foreach(Transform child in mini.transform)
         {
-            if (child.gameObject.CompareTag("block"))
-            {
-                var collider = child.gameObject.GetComponent<PolygonCollider2D>();
-                collider.enabled = false;
-            }
+           
             child.transform.localScale = new Vector3(1, 1, 1);
 
         }

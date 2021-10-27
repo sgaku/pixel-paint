@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2205093889360977996}
   m_Layer: 0
   m_Name: pink
-  m_TagString: block
+  m_TagString: pinkblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
