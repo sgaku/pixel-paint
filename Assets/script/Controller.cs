@@ -84,8 +84,7 @@ public class Controller : MonoBehaviour
         {
             if (heartblock.gameObject.CompareTag("whiteblock")||heartblock.gameObject.CompareTag("pinkblock"))
             {
-                int roundX = Mathf.RoundToInt(heartblock.transform.position.x);
-                int roundY = Mathf.RoundToInt(heartblock.transform.position.y);
+                
 
                 
                 heartbl.Add(heartblock.gameObject);
@@ -99,7 +98,30 @@ public class Controller : MonoBehaviour
                 minibl.Add(miniblock.gameObject); 
             }
         }
-        
+        CheckClear();
+    }
+
+    public void CheckClear()
+    {
+       foreach(GameObject heartblock in heartbl)
+        {
+            CheckTag1(heartblock);
+        }
+
+       foreach(GameObject miniblock in minibl)
+        {
+            CheckTag2(miniblock);
+        } 
+
+    }
+
+    void CheckTag1(GameObject h)
+    {
+
+    }
+    void CheckTag2(GameObject m)
+    {
+
     }
    
 
