@@ -1,1 +1,1 @@
-# pixel-match
+# pixel-paint
