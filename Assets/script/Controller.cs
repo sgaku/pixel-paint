@@ -10,9 +10,9 @@ public class Controller : MonoBehaviour
     bool checkColor;
     public GameObject heart;
     public GameObject mini;
-   public List<GameObject> heartbl = new List<GameObject>();
-   public List<GameObject> minibl = new List<GameObject>();
-
+    public List <GameObject> heartbl　= new List <GameObject>();
+    public List <GameObject> minibl = new List <GameObject>();
+         
 
 
     // Start is called before the first frame update
@@ -84,10 +84,8 @@ public class Controller : MonoBehaviour
         {
             if (heartblock.gameObject.CompareTag("whiteblock")||heartblock.gameObject.CompareTag("pinkblock"))
             {
-                
-
-                
                 heartbl.Add(heartblock.gameObject);
+               
             }
         }
 
@@ -95,35 +93,38 @@ public class Controller : MonoBehaviour
         {
             if (miniblock.gameObject.CompareTag("whiteblock")||miniblock.gameObject.CompareTag("pinkblock"))
             {
-                minibl.Add(miniblock.gameObject); 
+                minibl.Add(miniblock.gameObject);
             }
         }
-        CheckClear();
+        SortList();
     }
 
-    public void CheckClear()
+    public void SortList()
     {
-       foreach(GameObject heartblock in heartbl)
+
+
+        for (int i = 0; i < 22; i++)
         {
-            CheckTag1(heartblock);
+            if(heartbl[i].transform.position.y < heartbl[i+1].transform.position.y)
+            {
+              
+            }
+            else if(heartbl[i].transform.position.y == heartbl[i + 1].transform.position.y)
+            {
+
+            }
+            else
+            {
+
+            }
+         
         }
 
-       foreach(GameObject miniblock in minibl)
-        {
-            CheckTag2(miniblock);
-        } 
+      
 
     }
 
-    void CheckTag1(GameObject h)
-    {
-
-    }
-    void CheckTag2(GameObject m)
-    {
-
-    }
-   
+    
 
 }
 
