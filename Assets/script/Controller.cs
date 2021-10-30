@@ -12,8 +12,9 @@ public class Controller : MonoBehaviour
     public GameObject mini;
     public List <GameObject> heartbl　= new List <GameObject>();
     public List <GameObject> minibl = new List <GameObject>();
-         
 
+    public List<GameObject> h = new List<GameObject>();
+    public List<GameObject> m = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -102,25 +103,37 @@ public class Controller : MonoBehaviour
     public void SortList()
     {
 
-
-        for (int i = 0; i < 22; i++)
-        {
-            if(heartbl[i].transform.position.y < heartbl[i+1].transform.position.y)
+        
+        GameObject first = heartbl[0];
+   //   for(int g= 0; g < 22; g++)
+   //     {
+            for (int i = 1; i < 22; i++)
             {
-              
-            }
-            else if(heartbl[i].transform.position.y == heartbl[i + 1].transform.position.y)
-            {
-
-            }
-            else
-            {
+                if (heartbl[i].transform.position.y <= first.transform.position.y)
+                {
+                    if (heartbl[i].transform.position.x < first.transform.position.x)
+                    {
+                        first = heartbl[i];
+            //     Debug.Log(first);
+                    }
 
             }
          
-        }
 
-      
+           
+            
+            Debug.Log(first);
+            }
+          
+      //  }
+           
+
+       
+
+
+
+
+
 
     }
 
