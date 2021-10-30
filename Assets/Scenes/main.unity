@@ -145,7 +145,6 @@ GameObject:
   - component: {fileID: 177107664}
   - component: {fileID: 177107666}
   - component: {fileID: 177107667}
-  - component: {fileID: 177107668}
   m_Layer: 0
   m_Name: checkwhite
   m_TagString: Untagged
@@ -268,18 +267,6 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
---- !u!114 &177107668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177107663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c88bea97789c447418a107bb2bcc4c54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &552497906
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +279,6 @@ GameObject:
   - component: {fileID: 552497907}
   - component: {fileID: 552497909}
   - component: {fileID: 552497910}
-  - component: {fileID: 552497911}
   m_Layer: 0
   m_Name: checkpink
   m_TagString: Untagged
@@ -415,18 +401,6 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
---- !u!114 &552497911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552497906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c88bea97789c447418a107bb2bcc4c54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &558635319
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +719,8 @@ MonoBehaviour:
   mini: {fileID: 52278048}
   heartbl: []
   minibl: []
+  h: []
+  m: []
 --- !u!1 &1120957269
 GameObject:
   m_ObjectHideFlags: 0
