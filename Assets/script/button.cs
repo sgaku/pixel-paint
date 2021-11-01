@@ -13,9 +13,13 @@ public class button : MonoBehaviour
     public void OnClick()
     {
         FindObjectOfType<Controller2>().AddList();
-        heart.transform.position = new Vector3(6.75f, -5, -1);
-        mini.transform.position = new Vector3(-6.75f, -5, -1);
-        mini.transform.localScale = new Vector3(1, 1, 1);
+        //  heart.transform.position = new Vector3(6.75f, -5, -1);
+        //   mini.transform.position = new Vector3(-6.75f, -5, -1);
+        //   mini.transform.localScale = new Vector3(1, 1, 1);
+
+        heart.GetComponent<Animation>().Play("slide");
+        mini.GetComponent<Animation>().Play("leftdown");
+
        
         Debug.Log("click");
         foreach(Transform child in heart.transform)
