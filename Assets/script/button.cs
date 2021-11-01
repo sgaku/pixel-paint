@@ -13,7 +13,9 @@ public class button : MonoBehaviour
     public void OnClick()
     {
         FindObjectOfType<Controller2>().AddList();
-
+        heart.transform.position = new Vector3(6.75f, -5, -1);
+        mini.transform.position = new Vector3(-6.75f, -5, -1);
+        mini.transform.localScale = new Vector3(1, 1, 1);
        
         Debug.Log("click");
         foreach(Transform child in heart.transform)
@@ -22,7 +24,7 @@ public class button : MonoBehaviour
             {
                grandchild1= child.GetChild(0).gameObject;
 
-                Debug.Log(grandchild1);
+                
                 var collider = grandchild1.gameObject.GetComponent<PolygonCollider2D>();
                 collider.enabled = false;
                 grandchild1.transform.localScale = new Vector3(1, 1, 1);
