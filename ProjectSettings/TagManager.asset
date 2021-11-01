@@ -7,6 +7,7 @@ TagManager:
   - block
   - whiteblock
   - pinkblock
+  - parent
   layers:
   - Default
   - TransparentFX

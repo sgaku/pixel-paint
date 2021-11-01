@@ -79,63 +79,28 @@ public class Controller : MonoBehaviour
            
     }
 
-    public void AddList()
-    {
-        foreach(Transform heartblock in heart.transform)
-        {
-            if (heartblock.gameObject.CompareTag("whiteblock")||heartblock.gameObject.CompareTag("pinkblock"))
-            {
-                heartbl.Add(heartblock.gameObject);
-               
-            }
-        }
-
-        foreach(Transform miniblock in mini.transform)
-        {
-            if (miniblock.gameObject.CompareTag("whiteblock")||miniblock.gameObject.CompareTag("pinkblock"))
-            {
-                minibl.Add(miniblock.gameObject);
-            }
-        }
-        SortList();
-    }
-
-    public void SortList()
-    {
-
-        
-        GameObject first = heartbl[0];
-   //   for(int g= 0; g < 22; g++)
+ //   public void AddList()
+ //   {
+   //     foreach(Transform heartblock in heart.transform)
    //     {
-            for (int i = 1; i < 22; i++)
-            {
-                if (heartbl[i].transform.position.y <= first.transform.position.y)
-                {
-                    if (heartbl[i].transform.position.x < first.transform.position.x)
-                    {
-                        first = heartbl[i];
-            //     Debug.Log(first);
-                    }
+   //         if (heartblock.gameObject.CompareTag("whiteblock")||heartblock.gameObject.CompareTag("pinkblock"))
+   //         {
+  //              heartbl.Add(heartblock.gameObject);
+               
+  //          }
+ //       }
 
-            }
-         
+ //       foreach(Transform miniblock in mini.transform)
+ //       {
+ //           if (miniblock.gameObject.CompareTag("whiteblock")||miniblock.gameObject.CompareTag("pinkblock"))
+    //        {
+   //             minibl.Add(miniblock.gameObject);
+ //           }
+ //       }
+//        SortList();
+//    }
 
-           
-            
-            Debug.Log(first);
-            }
-          
-      //  }
-           
-
-       
-
-
-
-
-
-
-    }
+    
 
     
 

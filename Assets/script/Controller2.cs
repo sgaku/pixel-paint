@@ -7,17 +7,20 @@ public class Controller2 : MonoBehaviour
  //   LayerMask layer;
     public GameObject pinkBlock;
     public GameObject whiteBlock;
-    bool checkColor;
-//    public GameObject heart;
- //   public GameObject mini;
+    bool changeColor;
+    public GameObject heart;
+    public GameObject mini;
     public List<GameObject> heartbl = new List<GameObject>();
     public List<GameObject> minibl = new List<GameObject>();
+    private int count;
+    public GameObject clearText;
+    public GameObject failText;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        checkColor = true;
+        changeColor = false;
        // layer = LayerMask.GetMask("ignore");
         pinkBlock.transform.localScale = new Vector3(0.95f, 0.95f, 1);
         whiteBlock.transform.localScale = new Vector3(0.95f, 0.95f, 1);
@@ -40,17 +43,17 @@ public class Controller2 : MonoBehaviour
 
                 if (hit.collider.gameObject.name == "checkwhite")
                 {
-                    checkColor = true;
+                    changeColor = false;
                 }
                 if (hit.collider.gameObject.name == "checkpink")
                 {
-                    checkColor = false;
+                    changeColor = true;
                 }
 
                 if (hit.collider.gameObject.CompareTag("whiteblock") || hit.collider.gameObject.CompareTag("pinkblock"))
                 {
                    
-                    if (checkColor)
+                    if (!changeColor)
                     {
                         GameObject parentObj1 = hit.collider.transform.parent.gameObject;
                         Destroy(hit.collider.gameObject);
@@ -59,7 +62,7 @@ public class Controller2 : MonoBehaviour
                        
 
                     }
-                    else if (!checkColor)
+                    else if (changeColor)
                     {
                         GameObject parentObj2 = hit.collider.transform.parent.gameObject;
                         Destroy(hit.collider.gameObject);
@@ -83,38 +86,57 @@ public class Controller2 : MonoBehaviour
 
     public void AddList()
     {
-      //  foreach (Transform heartblock in heart.transform)
-    //    {
-       //     if (heartblock.gameObject.CompareTag("whiteblock") || heartblock.gameObject.CompareTag("pinkblock"))
-       //     {
-        //        heartbl.Add(heartblock.gameObject);
+        foreach (Transform heartParent in heart.transform)
+        {
+            if (heartParent.gameObject.CompareTag("parent") )
+            {
+                heartbl.Add(heartParent.gameObject);
 
-        //    }
-     //   }
+            }
+        }
 
-       // foreach (Transform miniblock in mini.transform)
-      //  {
-       //     if (miniblock.gameObject.CompareTag("whiteblock") || miniblock.gameObject.CompareTag("pinkblock"))
-       //     {
-       //         minibl.Add(miniblock.gameObject);
-       //     }
-     //   }
-        
+        foreach (Transform miniParent in mini.transform)
+        {
+            if (miniParent.gameObject.CompareTag("parent") )
+            {
+                minibl.Add(miniParent.gameObject);
+            }
+        }
+        CheckColor();  
     }
 
-    
+    public void CheckColor()
+    {
+        for(int i = 0; i < 22; i++)
+        {
+            if(heartbl[i].transform.GetChild(0).gameObject.tag == minibl[i].transform.GetChild(0).gameObject.tag)
+            {
+                count++;
+            }
+        }
 
-      
-
-
-
-
-
-
-
-
-
+        if(count == 22)
+        {
+            clearText.SetActive(true);
+        }else if(count < 22)
+        {
+            failText.SetActive(true);
+        }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
