@@ -12,9 +12,10 @@ public class Controller2 : MonoBehaviour
     public GameObject mini;
     public List<GameObject> heartbl = new List<GameObject>();
     public List<GameObject> minibl = new List<GameObject>();
-    private int count;
-    public GameObject clearText;
-    public GameObject failText;
+    private int equelCount;
+    private int starCount;
+   
+    public GameObject stars;
 
     
     // Start is called before the first frame update
@@ -83,6 +84,13 @@ public class Controller2 : MonoBehaviour
 
 
     }
+   public  void ChangePosition()
+    {
+        heart.GetComponent<Animation>().Play("slide");
+        mini.GetComponent<Animation>().Play("leftdown");
+
+        Invoke("AddList", 2);
+    }
 
     public void AddList()
     {
@@ -107,22 +115,48 @@ public class Controller2 : MonoBehaviour
 
     public void CheckColor()
     {
+        stars.SetActive(true);
         for(int i = 0; i < 22; i++)
         {
             if(heartbl[i].transform.GetChild(0).gameObject.tag == minibl[i].transform.GetChild(0).gameObject.tag)
             {
-                count++;
+                equelCount++;
             }
         }
+        if(equelCount == 22)
+        { 
+            starCount = 3;
+            StartCoroutine("Star");
 
-        if(count == 22)
+        }else if(equelCount < 22 && equelCount >= 11)
         {
-            clearText.SetActive(true);
-        }else if(count < 22)
-        {
-            failText.SetActive(true);
+            starCount = 2;
+            StartCoroutine("Star");
         }
+        else
+        {
+            starCount = 1;
+            StartCoroutine("Star");
+           
+        }
+
+       
     }
+
+    IEnumerator Star()
+    {
+        for(int i = 0; i < starCount; i++)
+        {
+            GameObject star = stars.transform.GetChild(i).gameObject;
+            star.GetComponent<Animation>().Play("changeColor");
+            yield return new WaitForSeconds(1);
+        } 
+
+
+        
+    }
+
+    
 
 
 
