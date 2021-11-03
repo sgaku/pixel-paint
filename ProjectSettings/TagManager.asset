@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - block
   - whiteblock
   - pinkblock
   - parent
+  - brownblock
   layers:
   - Default
   - TransparentFX
