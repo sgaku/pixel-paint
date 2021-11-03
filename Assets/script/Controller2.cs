@@ -16,6 +16,8 @@ public class Controller2 : MonoBehaviour
     private int starCount;
    
     public GameObject stars;
+    public GameObject goalEffect;
+    public GameObject outline;
 
     
     // Start is called before the first frame update
@@ -30,7 +32,14 @@ public class Controller2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (!changeColor)
+        {
+            outline.transform.position = new Vector3(0.5f, -5, 0);
+        }
+        else if (changeColor)
+        {
+            outline.transform.position = new Vector3(-0.7f, -5, 0);
+        }
 
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
@@ -45,6 +54,7 @@ public class Controller2 : MonoBehaviour
                 if (hit.collider.gameObject.name == "checkwhite")
                 {
                     changeColor = false;
+                   
                 }
                 if (hit.collider.gameObject.name == "checkpink")
                 {
@@ -56,6 +66,7 @@ public class Controller2 : MonoBehaviour
                    
                     if (!changeColor)
                     {
+                       
                         GameObject parentObj1 = hit.collider.transform.parent.gameObject;
                         Destroy(hit.collider.gameObject);
                         GameObject white1 = Instantiate(whiteBlock, hit.collider.transform.position, Quaternion.identity);
@@ -65,6 +76,7 @@ public class Controller2 : MonoBehaviour
                     }
                     else if (changeColor)
                     {
+                       
                         GameObject parentObj2 = hit.collider.transform.parent.gameObject;
                         Destroy(hit.collider.gameObject);
                         GameObject pink1 = Instantiate(pinkBlock, hit.collider.transform.position, Quaternion.identity);
@@ -140,7 +152,7 @@ public class Controller2 : MonoBehaviour
            
         }
 
-       
+        
     }
 
     IEnumerator Star()
@@ -148,12 +160,20 @@ public class Controller2 : MonoBehaviour
         for(int i = 0; i < starCount; i++)
         {
             GameObject star = stars.transform.GetChild(i).gameObject;
-            star.GetComponent<Animation>().Play("changeColor");
+            star.GetComponent<Animation>().Play("move");
             yield return new WaitForSeconds(1);
-        } 
+        }
 
+        GoalEffect();  
+    }
 
-        
+     void GoalEffect()
+    {
+        GameObject goal = Instantiate(goalEffect);
+        goal.transform.SetParent(Camera.main.transform);
+
+        goal.transform.localPosition = Vector3.up * 5f;
+        goal.transform.eulerAngles = new Vector3(0,100,0);
     }
 
     
