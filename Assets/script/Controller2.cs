@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Controller2 : MonoBehaviour
 {
- //   LayerMask layer;
+
     public GameObject pinkBlock;
     public GameObject whiteBlock;
     bool changeColor;
-    public GameObject heart;
+    public GameObject original;
     public GameObject mini;
-    public List<GameObject> heartbl = new List<GameObject>();
+    public List<GameObject> originalbl = new List<GameObject>();
     public List<GameObject> minibl = new List<GameObject>();
     private int equelCount;
     private int starCount;
@@ -19,12 +19,14 @@ public class Controller2 : MonoBehaviour
     public GameObject goalEffect;
     public GameObject outline;
 
-    
+    public GameObject button;
+    public GameObject next;
+
     // Start is called before the first frame update
     void Start()
     {
         changeColor = false;
-       // layer = LayerMask.GetMask("ignore");
+     
         pinkBlock.transform.localScale = new Vector3(0.95f, 0.95f, 1);
         whiteBlock.transform.localScale = new Vector3(0.95f, 0.95f, 1);
     }
@@ -98,7 +100,7 @@ public class Controller2 : MonoBehaviour
     }
    public  void ChangePosition()
     {
-        heart.GetComponent<Animation>().Play("slide");
+        original.GetComponent<Animation>().Play("slide");
         mini.GetComponent<Animation>().Play("leftdown");
 
         Invoke("AddList", 2);
@@ -106,11 +108,11 @@ public class Controller2 : MonoBehaviour
 
     public void AddList()
     {
-        foreach (Transform heartParent in heart.transform)
+        foreach (Transform heartParent in original.transform)
         {
             if (heartParent.gameObject.CompareTag("parent") )
             {
-                heartbl.Add(heartParent.gameObject);
+                originalbl.Add(heartParent.gameObject);
 
             }
         }
@@ -130,7 +132,7 @@ public class Controller2 : MonoBehaviour
         stars.SetActive(true);
         for(int i = 0; i < 22; i++)
         {
-            if(heartbl[i].transform.GetChild(0).gameObject.tag == minibl[i].transform.GetChild(0).gameObject.tag)
+            if(originalbl[i].transform.GetChild(0).gameObject.tag == minibl[i].transform.GetChild(0).gameObject.tag)
             {
                 equelCount++;
             }
@@ -163,7 +165,7 @@ public class Controller2 : MonoBehaviour
             star.GetComponent<Animation>().Play("move");
             yield return new WaitForSeconds(1);
         }
-
+        Destroy(button);
         GoalEffect();  
     }
 
@@ -174,6 +176,7 @@ public class Controller2 : MonoBehaviour
 
         goal.transform.localPosition = Vector3.up * 5f;
         goal.transform.eulerAngles = new Vector3(0,100,0);
+        next.SetActive(true);
     }
 
     
