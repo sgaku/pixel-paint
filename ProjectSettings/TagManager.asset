@@ -8,6 +8,8 @@ TagManager:
   - pinkblock
   - parent
   - brownblock
+  - yellowblock
+  - darkgrayblock
   layers:
   - Default
   - TransparentFX
