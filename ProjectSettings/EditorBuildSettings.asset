@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/third.unity
     guid: 9ff6b614662f949b6b2ace90eb3aa4b8
+  - enabled: 1
+    path: Assets/Scenes/forth.unity
+    guid: 03eb9fc5cd5424e799b40246364d5d8c
   m_configObjects: {}

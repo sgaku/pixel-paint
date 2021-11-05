@@ -17,6 +17,8 @@ public class controller3 : MonoBehaviour
     public GameObject stars;
     public GameObject goalEffect;
     public GameObject outline;
+    public GameObject button;
+    public GameObject next;
     
     // Start is called before the first frame update
     void Start()
@@ -152,7 +154,7 @@ public class controller3 : MonoBehaviour
             star.GetComponent<Animation>().Play("move");
             yield return new WaitForSeconds(1);
         }
-       
+        Destroy(button);
         GoalEffect();
        
     }
@@ -163,6 +165,7 @@ public class controller3 : MonoBehaviour
 
         goal.transform.localPosition = Vector3.up * 5f;
         goal.transform.eulerAngles = new Vector3(0, 100, 0);
+        next.SetActive(true);
       
     }
 
