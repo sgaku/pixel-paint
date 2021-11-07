@@ -28,7 +28,7 @@ public class controller3 : MonoBehaviour
         brownBlock.transform.localScale = new Vector3(0.95f, 0.95f, 1);
         whiteBlock.transform.localScale = new Vector3(0.95f, 0.95f, 1);
     }
-
+   
     // Update is called once per frame
     void Update()
     {
@@ -120,7 +120,8 @@ public class controller3 : MonoBehaviour
         for (int i = 0; i < 29; i++)
         {
             
-            if (originalbl[i].transform.GetChild(0).gameObject.CompareTag("brownblock") && originalbl[i].transform.GetChild(0).gameObject.tag == minibl[i].transform.GetChild(0).gameObject.tag)
+            if (originalbl[i].transform.GetChild(0).gameObject.CompareTag("brownblock") &&
+                originalbl[i].transform.GetChild(0).gameObject.tag == minibl[i].transform.GetChild(0).gameObject.tag)
             {
                 equelCount++;
             }
