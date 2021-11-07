@@ -39,18 +39,7 @@ public class Controller4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(colorNumber == 1)
-        {
-            outline.transform.position = new Vector3(-1.4f, -10, 0);
-        }
-        if(colorNumber == 2)
-        {
-            outline.transform.position = new Vector3(0, -10, 0);
-        }
-        if(colorNumber == 3)
-        {
-            outline.transform.position = new Vector3(1.4f, -10, 0);
-        }
+       
 
 
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -67,10 +56,13 @@ public class Controller4 : MonoBehaviour
                 if(hit.collider.gameObject.name == "checkbrown")
                 {
                     colorNumber = 2;
+                    outline.GetComponent<Animation>().Play("touchslide1");
+
                 }
                 if(hit.collider.gameObject.name == "checkgray")
                 {
                     colorNumber = 3;
+                    outline.GetComponent<Animation>().Play("touchslide2");
                 }
 
                 if(hit.collider.gameObject.CompareTag("yellowblock") || hit.collider.gameObject.CompareTag("brownblock")
