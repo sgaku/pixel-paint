@@ -9598,6 +9598,10 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: de6125f73409c4bca849d8d02a1269c9, type: 2}
   - {fileID: 7400000, guid: 82aeb8c23e6364b31b43a0c780a57a81, type: 2}
+  - {fileID: 7400000, guid: 9793520336b824795a76474b7a477db9, type: 2}
+  - {fileID: 7400000, guid: 95876e03185c344338a2700e7b1b3f35, type: 2}
+  - {fileID: 7400000, guid: ded4b1863c6494fdfad8998ca01b1077, type: 2}
+  - {fileID: 7400000, guid: 22c2479d955084301899a4e03dce43fe, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0

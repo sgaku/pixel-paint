@@ -109,11 +109,11 @@ public class Controller2 : MonoBehaviour
 
     public void AddList()
     {
-        foreach (Transform heartParent in original.transform)
+        foreach (Transform originalParent in original.transform)
         {
-            if (heartParent.gameObject.CompareTag("parent") )
+            if (originalParent.gameObject.CompareTag("parent") )
             {
-                originalbl.Add(heartParent.gameObject);
+                originalbl.Add(originalParent.gameObject);
 
             }
         }
