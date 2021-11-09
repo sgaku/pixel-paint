@@ -34,14 +34,7 @@ public class Controller2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!changeColor)
-        {
-            outline.transform.position = new Vector3(0.5f, -5, 0);
-        }
-        else if (changeColor)
-        {
-            outline.transform.position = new Vector3(-0.7f, -5, 0);
-        }
+        
 
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
@@ -55,11 +48,19 @@ public class Controller2 : MonoBehaviour
 
                 if (hit.collider.gameObject.name == "checkwhite")
                 {
+                    if(outline.transform.position.x < 0)
+                    {
+                        outline.GetComponent<Animation>().Play("movewhite");
+                    }
                     changeColor = false;
                    
                 }
                 if (hit.collider.gameObject.name == "checkpink")
                 {
+                    if(outline.transform.position.x > 0)
+                    {
+                        outline.GetComponent<Animation>().Play("movepink");
+                    }
                     changeColor = true;
                 }
 

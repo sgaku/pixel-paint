@@ -50,19 +50,42 @@ public class Controller4 : MonoBehaviour
             {
                 if(hit.collider.gameObject.name == "checkyellow")
                 {
+                    if (outline.transform.position.x < -0.6f && outline.transform.position.x > -1)
+                    {
+                        outline.GetComponent<Animation>().Play("touchslide4");
+                    }else if (outline.transform.position.x > 0.7f )
+                    {
+                        outline.GetComponent<Animation>().Play("touchslide6");
+                    }
                     colorNumber = 1;
                 }
 
                 if(hit.collider.gameObject.name == "checkbrown")
                 {
+                    if (outline.transform.position.x < -2 )
+                    {
+                        outline.GetComponent<Animation>().Play("touchslide1");
+                    }
+                    else if (outline.transform.position.x > 0.7f)
+                    {
+                        outline.GetComponent<Animation>().Play("touchslide3");
+                    }
                     colorNumber = 2;
-                    outline.GetComponent<Animation>().Play("touchslide1");
+                    
 
                 }
                 if(hit.collider.gameObject.name == "checkgray")
                 {
+                    if (outline.transform.position.x < -2)
+                    {
+                        outline.GetComponent<Animation>().Play("touchslide5");
+                    }
+                    else if (outline.transform.position.x < -0.6 && outline.transform.position.x > -1)
+                    {
+                        outline.GetComponent<Animation>().Play("touchslide2");
+                    }
                     colorNumber = 3;
-                    outline.GetComponent<Animation>().Play("touchslide2");
+                    
                 }
 
                 if(hit.collider.gameObject.CompareTag("yellowblock") || hit.collider.gameObject.CompareTag("brownblock")
